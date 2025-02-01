@@ -1,0 +1,29 @@
+<app-navbar/>
+<div class="admin-container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Entrada</th>
+        <th>HCU</th>
+        <th>Numero</th>
+        <th>Medio</th>
+        <th>Municipio</th>
+        <th>Sector</th>
+        <th>Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataList">
+        <td>{{data.id}}</td>
+        <td>{{data.entrada}}</td>
+        <td>{{data.hcu}}</td>
+        <td>{{data.numero}}</td>
+        <td>{{data.medio}}</td>
+        <td>{{data.municipio}}</td>
+        <td>{{data.sector}}</td>
+        <td>{{data.username}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
