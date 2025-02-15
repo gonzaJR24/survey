@@ -1,0 +1,69 @@
+<app-navbar />
+<div class="registration-form">
+  <form #form="ngForm">
+    <div class="form-icon">
+      <span><i class="icon icon-user">
+          <img src="https://raw.githubusercontent.com/gonzaJR24/kpi_front/refs/heads/main/Logo-fondo-blanco.png" alt=""
+            class="img">
+        </i></span>
+    </div>
+    <div class="form-group">
+      <label for="entrada">Cliente viene por primera vez?</label>
+      <select class="form-select form-control item" id="entrada" name="entrada" [(ngModel)]="formData.entrada" required>
+        <option value="">--seleccione--</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="hcu">HCU</label>
+      <input type="text" class="form-control item" id="hcu" name="hcu" [(ngModel)]="formData.hcu" required>
+    </div>
+
+    <div class="form-group">
+      <label for="numero">Numero</label>
+      <input type="text" class="form-control item" id="numero" name="numero" [(ngModel)]="formData.numero" required>
+    </div>
+
+    <div class="form-group">
+      <label for="medio">Medio</label>
+      <select class="form-select form-control item" id="medio" name="medio" [(ngModel)]="formData.medio" required>
+        <option value="">--seleccione--</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Youtube">Youtube</option>
+        <option value="Pagina Web">Pagina Web</option>
+        <option value="Radio">Radio</option>
+        <option value="TV">TV</option>
+        <option value="Referido">Referido</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="municipio">Municipio</label>
+      <select class="form-select form-control item" id="municipio" name="municipio" [(ngModel)]="formData.municipio" required>
+        <option value="">--seleccione--</option>
+        <option value="Santo Domingo Norte">Santo Domingo Norte</option>
+        <option value="Santo Domingo Este">Santo Domingo Este</option>
+        <option value="Santo Domingo Oeste">Santo Domingo Oeste</option>
+        <option value="Pedro Brand">Pedro Brand</option>
+        <option value="San Antonio de Guerra">San Antonio de Guerra</option>
+        <option value="Boca Chica">Boca Chica</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sector">Sector</label>
+      <select class="form-select form-control item" id="sector" name="sector" [(ngModel)]="formData.sector" required>
+        <option value="">--seleccione--</option>
+        <option *ngFor="let sector of sectors" [value]="sector.sector">{{sector.sector.toLowerCase()}}</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-primary" (click)="submit(form)">Enviar</button>
+    </div>
+  </form>
+</div>

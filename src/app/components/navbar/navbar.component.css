@@ -1,0 +1,41 @@
+.nav{
+    background-color: rgba(6, 88, 196, 0.685);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul{
+    display: flex;
+}
+
+li{
+    margin-left: 4px;
+    list-style: none;
+    font-size: 16px;
+}
+
+li button{
+    background-color: transparent;
+    border: none;
+}
+
+
+button:hover{
+    color: rgb(255, 255, 255) !important;
+}
+
+img{
+    width: 156px;
+    height: 64px;
+}
+
+button:hover img {
+  filter: brightness(100%) saturate(100%) invert(100%);
+}
+
+.ico{
+  width: 14px;
+  height: 14px;
+}
